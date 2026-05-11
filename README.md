@@ -97,11 +97,11 @@ probably be enough to conduct the intended analysis.
 After removing the null values from the datasets, these were kept in the `cleaned_data/20260510-no_nulls/` directory.
 
 Overall, the used datasets appear to be:
-**Reliable**
-**Original**
-**Comprehensive**
-**Current**
-**Cited**
+* **Reliable**
+* **Original**
+* **Comprehensive**
+* **Current**
+* **Cited**
 
 ## Process
 After preparing the datasets, I cleaned some errors and inconsistencies I found in the data.
