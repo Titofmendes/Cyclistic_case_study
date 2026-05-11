@@ -49,18 +49,20 @@ The executed commands can be found in [Prepare Script](./scripts/prepare.ipynb).
 | `member_casual` | str |
 
 ### Dataset size
-Data file '202505' -> 502456 rows.
-Data file '202506' -> 678904 rows.
-Data file '202507' -> 763432 rows.
-Data file '202508' -> 790177 rows.
-Data file '202509' -> 714759 rows.
-Data file '202510' -> 646039 rows.
-Data file '202511' -> 356628 rows.
-Data file '202512' -> 140534 rows.
-Data file '202601' -> 137787 rows.
-Data file '202602' -> 201450 rows.
-Data file '202603' -> 317037 rows.
-Data file '202604' -> 448252 rows.
+| Data file | No rows |
+| :--- | :--- |
+| '202505' | 502456 |
+| '202506' | 678904 |
+| '202507' | 763432 |
+| '202508' | 790177 |
+| '202509' | 714759 |
+| '202510' | 646039 |
+| '202511' | 356628 |
+| '202512' | 140534 |
+| '202601' | 137787 |
+| '202602' | 201450 |
+| '202603' | 317037 |
+| '202604' | 448252 |
 
 ### Column Homogeneity
 All datasets present the same number and name of columns.
