@@ -12,8 +12,6 @@ The main goal of this project is to simulate a case study, in which I need to co
 ## Project structure
 ```
 google_capstone/
-├── raw_data/      
-├── cleaned_data/  
 ├── scripts/       
 ├── plots/        
 └── README.md
