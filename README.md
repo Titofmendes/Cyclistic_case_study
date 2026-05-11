@@ -1,4 +1,4 @@
-# Data Analysis on Bicycle Usage
+# Data Analysis on Bike Usage
 _This case study served as one of the Capstone Projects for the Google Data Analytics Professional Certificate._
 
 ## Overview
