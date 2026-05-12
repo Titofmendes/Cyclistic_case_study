@@ -11,7 +11,10 @@ The main goal of this project is to simulate a case study, in which I need to co
 
 ## Project structure
 ```
-google_capstone/
+Cyclistic_case_study/
+├── cleaned_data/
+├── raw_data/
+├── notebooks/
 ├── scripts/       
 ├── plots/        
 └── README.md
