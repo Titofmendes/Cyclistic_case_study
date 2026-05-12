@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[52]:
 
 
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
+from matplotlib import ticker as ticker
 
 # List of months used in the analysis
 months = [
@@ -40,7 +41,7 @@ month_list = [
 ]
 
 
-# In[3]:
+# In[2]:
 
 
 # function to load the cleaned data files
@@ -370,5 +371,79 @@ ax.legend(title='Member')
 plt.xticks(rotation=45)
 plt.tight_layout()
 plt.savefig("../plots/seasonal_ride_variation_workdays_vs_weekend_member.png")
+plt.show()
+
+
+# In[58]:
+
+
+# Comparison between Membership and Casual riders starting points in August (summer reference)
+df = load_csv(months[3])
+mask = df['member_casual'] == 'member'
+results = df[mask].groupby(['start_lng', 'start_lat']).size().reset_index(name='count')
+plot_df = pd.DataFrame(results)
+plt.figure(figsize=(6, 6))
+plt.scatter(plot_df['start_lng'], plot_df['start_lat'], alpha=0.3, s=plot_df['count'] * 0.05, color='blue')
+plt.title('Start station frequency: Membership - August')
+plt.xlabel('Longitude')
+plt.ylabel('Latitude')
+plt.gca().xaxis.set_major_locator(ticker.MultipleLocator(0.1))
+plt.gca().yaxis.set_major_locator(ticker.MultipleLocator(0.1))
+plt.gca().set_aspect('equal', adjustable='box')
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.savefig("../plots/start_station_freq_member_august.png")
+plt.show()
+
+df = load_csv(months[3])
+mask = df['member_casual'] == 'casual'
+results = df[mask].groupby(['start_lng', 'start_lat']).size().reset_index(name='count')
+plot_df = pd.DataFrame(results)
+plt.figure(figsize=(6, 6))
+plt.scatter(plot_df['start_lng'], plot_df['start_lat'], alpha=0.3, s=plot_df['count'] * 0.05, color='red')
+plt.title('Start station frequency: Casual - August')
+plt.xlabel('Longitude')
+plt.ylabel('Latitude')
+plt.gca().xaxis.set_major_locator(ticker.MultipleLocator(0.1))
+plt.gca().yaxis.set_major_locator(ticker.MultipleLocator(0.1))
+plt.gca().set_aspect('equal', adjustable='box')
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.savefig("../plots/start_station_freq_casual_august.png")
+plt.show()
+
+
+# In[59]:
+
+
+# Comparison between Membership and Casual riders starting points in January (winter reference)
+df = load_csv(months[8])
+mask = df['member_casual'] == 'member'
+results = df[mask].groupby(['start_lng', 'start_lat']).size().reset_index(name='count')
+plot_df = pd.DataFrame(results)
+plt.figure(figsize=(6, 6))
+plt.scatter(plot_df['start_lng'], plot_df['start_lat'], alpha=0.3, s=plot_df['count'] * 0.05, color='blue')
+plt.title('Start station frequency: Membership - January')
+plt.xlabel('Longitude')
+plt.ylabel('Latitude')
+plt.gca().xaxis.set_major_locator(ticker.MultipleLocator(0.1))
+plt.gca().yaxis.set_major_locator(ticker.MultipleLocator(0.1))
+plt.gca().set_aspect('equal', adjustable='box')
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.savefig("../plots/start_station_freq_member_january.png")
+plt.show()
+
+df = load_csv(months[8])
+mask = df['member_casual'] == 'casual'
+results = df[mask].groupby(['start_lng', 'start_lat']).size().reset_index(name='count')
+plot_df = pd.DataFrame(results)
+plt.figure(figsize=(6, 6))
+plt.scatter(plot_df['start_lng'], plot_df['start_lat'], alpha=0.3, s=plot_df['count'] * 0.05, color='red')
+plt.title('Start station frequency: Casual - January')
+plt.xlabel('Longitude')
+plt.ylabel('Latitude')
+plt.gca().xaxis.set_major_locator(ticker.MultipleLocator(0.1))
+plt.gca().yaxis.set_major_locator(ticker.MultipleLocator(0.1))
+plt.gca().set_aspect('equal', adjustable='box')
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.savefig("../plots/start_station_freq_casual_january.png")
 plt.show()
 
