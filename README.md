@@ -140,39 +140,62 @@ Upon inspecting and analyzing the cleaned data, I identified the folowing trends
 ### Seasonal number of rides variation
 Firstly, the total number of rides was assessed throught the define time period (May, 2025 - April, 2026).
 The bike usage reached its peak during Summer season (July-September), while the lowest usage was registered during the Winter months (December-February).
+
 ![Seasonal ride variation](./plots/seasonal_ride_variation.png)
 
 
 ### Seasonal number of rides variation: Member _vs._ Casual
 By comparing the total number of rides between the membership and casual riders, it is possible to observe that membership riders clearly perform a higher number of trips. Both groups follow the same relative seasonal bike usage, higher during Summer months and lower during Winter months.
+
 ![Seasonal ride variation: member vs. casual](./plots/seasonal_ride_variation_member_vs_casual.png)
 
 
 ### Seasonal number of rides variation: Classic _vs._ Electric bikes
 Interestingly, it is possible to verified a gradual shift from classic bikes to electric bikes. Until September, classic bikes were preferred, with the bike type preference shifting towards electric bikes starting from November.
 With the current available data, it is not possible to infer if the bike usage shift is due to a change in the users preference or to a change in the classic/electric bike ratio made available to the public.
+
 ![Seasonal ride variation: classic vs. electric](./plots/seasonal_ride_variation_classic_vs_electric.png)
 
 
 ### Seasonal number of rides variation: Bike type preference between groups
 Following the previous analysis of the classic/electric bike usage ratio, I compared the bike type preferences between casual and membership riders. Interestingly, casual riders started using more electric bike in September, 2025. On the other hand, membership riders only started to use electric bikes more often starting from December, 2025.
+
 ![Seasonal ride variation: membership riders](./plots/seasonal_ride_variation_member.png)
+
 ![Seasonal ride variation: casual riders](./plots/seasonal_ride_variation_casual.png)
 
 
 ### Seasonal ride duration variation: Casual _vs._ Member median
 While membership riders are responsible for the great majority of trips, the longest trips are attributed to casual riders. These results may be significantly impacted by casual riders that purchased the full-day pass.
+
 ![Seasonal ride duration variation: casual vs. member median](./plots/seasonal_ride_duration_variation_casual_vs_member_median.png)
 
 
 ### Seasonal number of rides variation: Workdays _vs._ Weekend
-Finnaly, I compared the number of rides that occurred during the workdays and those that occurred during the weekend.
+I also compared the number of rides that occurred during the workdays and those that occurred during the weekend.
 There is a clear distinction in the day preference between casual and membership riders.
 Casual riders prefer to ride during weekends. This trend is not observable during the Winter months (December-February).
 Membership riders, in average, perform more trips during the workdays.
 One can suspect that membership riders use the bikes for their daily home-work/work-home trips, while casual riders use the bikes for leisure activities 
+
 ![Seasonal ride variation: workdays vs. weekend casual riders](./plots/seasonal_ride_variation_workdays_vs_weekend_casual.png)
+
 ![Seasonal ride variation: workdays vs. weekend membership riders](./plots/seasonal_ride_variation_workdays_vs_weekend_member.png)
+
+
+### Starting station geodistribution and frequency: Membership _vs._ Casual
+Finally, I compared how membership and casual riders differ in their trip starting stations during two distinct months, August and January, representing Summer and Winter, respectively.
+As expected, membership riders present generally higher frequency than casual riders, especially during winter. However, there is no evident difference considering the geodistribution between the two groups of riders.
+Nevertheless, it is worth noting that the most frequent starting stations are located preferably within the spatial window of 41.8ºN - 42.0ºN and 87.7ºW - 87.6ºW, and around the point (41.8ºN, 87.6ºW), while usage of starting station from other geographical sectors was residual.
+
+
+![Geodistribution and frequency in summer: membership riders](./plots/start_station_freq_member_august.png)
+
+![Geodistribution and frequency in summer: casual riders](./plots/start_station_freq_casual_august.png)
+
+![Geodistribution and frequency in winter: membership riders](./plots/start_station_freq_member_january.png)
+
+![Geodistribution and frequency in winter: casual riders](./plots/start_station_freq_casual_january.png)
 
 ## Recommendations
 * 1 - Anounce an increase in the number of electric bikes available. Casual riders showed a shift in the bike type preference 3 months earlier than membership riders. The increment in the electric bikes availability can help with the user profile transition from casual to membership.
