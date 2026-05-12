@@ -25,14 +25,14 @@ Lily Moreno, my manager and the director of marketing of Cyclistic, a company th
 
 ## Data Sources
 It was used data corresponding to the period between May, 2025 and April, 2026.
-Raw data was downloaded from [this repository](https://divvy-tripdata.s3.amazonaws.com/index.html), unziped, and kept in the 'raw_data' directory.
+Raw data was downloaded from [this repository](https://divvy-tripdata.s3.amazonaws.com/index.html), unziped, and kept in the `raw_data/` directory.
 
-**Note**: 202601 csv file was initially designated as 202501. Name was corrected.
+**Note**: 202601 csv file was initially designated as 202501. Name was changed to the correct designation.
 
 Since each dataset displayed hundreds of thousands of rows, I choose to conduct all analyses with Python through Jupyter Notebook.
 
 I started with some exploratory analyses to assess the schema, size, data integrity and column homogeneity among data files.
-The executed commands can be found in [Prepare Script](./scripts/prepare.ipynb).
+The executed commands can be found in [Prepare Notebook](./notebooks/prepare.ipynb).
 
 ### Dataset schema
 | Column Name | Data Type |
@@ -108,7 +108,7 @@ Overall, the used datasets appear to be:
 
 ## Process
 After preparing the datasets, I cleaned some errors and inconsistencies I found in the data.
-The executed commands can be found in [Process Script](./scripts/process.ipynb).
+The executed commands can be found in [Process Notebook](./notebooks/process.ipynb).
 
 Two new columns (`ride_duration` and `weekday`) were calculated after converting the columns `started_at` and `ended_at` to `datetime` type.
 
@@ -127,7 +127,7 @@ The final cleaned datasets were kept in the `cleaned_data/20260510-final/` direc
 ## Key Insights
 After the final data cleaning process, I proceeded with the analysis to tackle the business task.
 To reiterate, I need to provide insights to the marketing analytics team regarding the differences between 'member' and 'casual' riders.
-The executed commands for the analysis can be found in [Analyze Script](./scripts/analyze.ipynb).
+The executed commands for the analysis can be found in [Analyze Notebook](./notebooks/analyze.ipynb).
 
 Upon inspecting and analyzing the cleaned data, I identified the folowing trends:
 
