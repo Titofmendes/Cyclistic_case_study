@@ -15,7 +15,13 @@ Cyclistic_case_study/
 ├── cleaned_data/
 ├── raw_data/
 ├── notebooks/
-├── scripts/       
+    ├── prepare.ipynb
+    ├── process.ipynb
+    └── analyze.ipynb
+├── scripts/
+    ├── prepare.py
+    ├── process.py
+    └── analyze.py      
 ├── plots/        
 └── README.md
 ```
