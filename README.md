@@ -186,7 +186,7 @@ One can suspect that membership riders use the bikes for their daily home-work/w
 ### Starting station geodistribution and frequency: Membership _vs._ Casual
 Finally, I compared how membership and casual riders differ in their trip starting stations during two distinct months, August and January, representing Summer and Winter, respectively.
 As expected, membership riders present generally higher frequency than casual riders, especially during winter. However, there is no evident difference considering the geodistribution between the two groups of riders.
-Nevertheless, it is worth noting that the most frequent starting stations are located preferably within the spatial window of 41.8ºN - 42.0ºN and 87.7ºW - 87.6ºW, and around the point (41.8ºN, 87.6ºW), while usage of starting station from other geographical sectors was residual.
+Nevertheless, it is worth noting that the most frequent starting stations are located preferably within the spatial window of (41.8ºN-42.0ºN; 87.7ºW-87.6ºW), and around the point (41.8ºN; 87.6ºW), while usage of starting station from other geographical sectors was residual.
 
 
 ![Geodistribution and frequency in summer: membership riders](./plots/start_station_freq_member_august.png)
@@ -202,11 +202,12 @@ Nevertheless, it is worth noting that the most frequent starting stations are lo
 
 * 2 - Offer free trials or discounts for new members on workdays. Casual riders may start to consider bikes for their daily home-work trips.
 
+* 3 - Focus the marketing efforts within the areas with the highest bike usage, namely the sector (41.8ºN-42.0ºN; 87.7ºW-87.6ºW).
+
 ## Conclusion
 This case study was a great way to apply my new data analyst skills.
-While I conducted all phases of the project, this is a work in progress.
-There are some perspectives in the data analysis process that I didn't conduct yet that will provide further insights.
-For the next steps, I plan to analyze the differences between casual and membership riders from a geographical point of view, considering their starting and ending stations/coordinates.
+I conducted all phases of the data analysis lifecycle, including data collection, preparation, cleaning, transformation, and analysis.
+I could also retrieve meaningful insight in order to provide data-driven recommendations.
 
 ## Author contact
 Created by: Tito Mendes
