@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[52]:
-
-
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
@@ -40,59 +37,31 @@ month_list = [
     "April"
 ]
 
-
-# In[2]:
-
-
 # function to load the cleaned data files
 def load_csv(month):
     return pd.read_csv(f"../cleaned_data/20260510-final/{month}_final.csv")
-
-
-# In[4]:
-
 
 # function to compare both types of members
 def compare_member_casual(df):
     return df.groupby('member_casual').size()
 
-
-# In[5]:
-
-
 # function to compare the usage of both types of bikes
 def compare_bike_usage(df):
     return df.groupby('rideable_type').size()
 
-
-# In[6]:
-
-
 # function to compare both types of bikes grouped by membsership
 def compare_bike_usage_by_membership(df):
     return df.groupby(['member_casual', 'rideable_type']).size()
-
-
-# In[7]:
-
 
 # function to compare ride durations
 def compare_ride_duration(df):
     df['ride_duration'] = pd.to_timedelta(df['ride_duration'])
     return df['ride_duration'].agg(['min', 'median', 'mean', 'max'])
 
-
-# In[8]:
-
-
 # function to compare ride durations between membership
 def compare_ride_duration_by_membership(df):
     df['ride_duration'] = pd.to_timedelta(df['ride_duration'])
     return df.groupby('member_casual')['ride_duration'].agg(['median', 'mean'])
-
-
-# In[9]:
-
 
 # function to compare bike usage by weekday
 def compare_bike_usage_by_weekday(df):
@@ -100,19 +69,11 @@ def compare_bike_usage_by_weekday(df):
     df['weekday'] = pd.Categorical(df['weekday'], categories=order, ordered=True)
     return df.groupby('weekday').size()
 
-
-# In[10]:
-
-
 # function to compare bike usage by weekday and membership
 def compare_bike_usage_by_weekday_and_membership(df):
     order = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     df['weekday'] = pd.Categorical(df['weekday'], categories=order, ordered=True)
     return df.groupby(['member_casual', 'weekday']).size()
-
-
-# In[11]:
-
 
 # Check seasonal differences in rides
 for month in months:
@@ -120,10 +81,6 @@ for month in months:
     df = load_csv(month)
     print(f"Total no rides: {len(df)}")
     print("------------------------------------------------------------")    
-
-
-# In[12]:
-
 
 results = {}
 index = 0
@@ -147,10 +104,6 @@ plt.tight_layout()
 plt.savefig("../plots/seasonal_ride_variation.png")
 plt.show()
 
-
-# In[13]:
-
-
 # Check differences between bike types and membership
 for month in months:
     print(f"Month: {month}")
@@ -159,10 +112,6 @@ for month in months:
     print(f"Classic vs. Electric: {compare_bike_usage(df)}")
     print(f"Membership & Bike Type: {compare_bike_usage_by_membership(df)}")
     print("-------------------------------------------------------------")
-
-
-# In[14]:
-
 
 results = {}
 index = 0
@@ -187,10 +136,6 @@ plt.tight_layout()
 plt.savefig("../plots/seasonal_ride_variation_member_vs_casual.png")
 plt.show()
 
-
-# In[15]:
-
-
 results = {}
 index = 0
 
@@ -213,10 +158,6 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.savefig("../plots/seasonal_ride_variation_classic_vs_electric.png")
 plt.show()
-
-
-# In[16]:
-
 
 results = {}
 index = 0
@@ -256,10 +197,6 @@ plt.tight_layout()
 plt.savefig("../plots/seasonal_ride_variation_member.png")
 plt.show()
 
-
-# In[17]:
-
-
 # Check seasonal differences in ride duration
 for month in months:
     print(f"Month: {month}")
@@ -267,20 +204,12 @@ for month in months:
     print(f"Ride duration:\n{compare_ride_duration(df)}")
     print("------------------------------------------------------------")
 
-
-# In[18]:
-
-
 # Check seasonal differences in ride duration by membership
 for month in months:
     print(f"Month: {month}")
     df = load_csv(month)
     print(f"Ride duration:\n{compare_ride_duration_by_membership(df)}")
     print("------------------------------------------------------------")
-
-
-# In[19]:
-
 
 results = {}
 index = 0
@@ -305,10 +234,6 @@ plt.tight_layout()
 plt.savefig("../plots/seasonal_ride_duration_variation_casual_vs_member_median.png")
 plt.show()
 
-
-# In[20]:
-
-
 # Check seasonal differences among weekdays
 for month in months:
     print(f"Month: {month}")
@@ -316,20 +241,12 @@ for month in months:
     print(f"{compare_bike_usage_by_weekday(df)}")
     print("------------------------------------------------------------")
 
-
-# In[21]:
-
-
 # Check seasonal differences among weekdays and between membership
 for month in months:
     print(f"Month: {month}")
     df = load_csv(month)
     print(f"{compare_bike_usage_by_weekday_and_membership(df)}")
     print("------------------------------------------------------------")
-
-
-# In[22]:
-
 
 results = {}
 index = 0
@@ -373,10 +290,6 @@ plt.tight_layout()
 plt.savefig("../plots/seasonal_ride_variation_workdays_vs_weekend_member.png")
 plt.show()
 
-
-# In[58]:
-
-
 # Comparison between Membership and Casual riders starting points in August (summer reference)
 df = load_csv(months[3])
 mask = df['member_casual'] == 'member'
@@ -410,10 +323,6 @@ plt.grid(True, linestyle='--', alpha=0.6)
 plt.savefig("../plots/start_station_freq_casual_august.png")
 plt.show()
 
-
-# In[59]:
-
-
 # Comparison between Membership and Casual riders starting points in January (winter reference)
 df = load_csv(months[8])
 mask = df['member_casual'] == 'member'
@@ -446,4 +355,3 @@ plt.gca().set_aspect('equal', adjustable='box')
 plt.grid(True, linestyle='--', alpha=0.6)
 plt.savefig("../plots/start_station_freq_casual_january.png")
 plt.show()
-
