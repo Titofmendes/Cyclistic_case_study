@@ -211,4 +211,5 @@ I could also retrieve meaningful insight in order to provide data-driven recomme
 
 ## Author contact
 Created by: Tito Mendes
+
 [LinkedIn](https://www.linkedin.com/in/tito-mendes/)
