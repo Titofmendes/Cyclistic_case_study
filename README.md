@@ -26,6 +26,12 @@ Cyclistic_case_study/
 └── README.md
 ```
 
+## Technologies used
+* **Language:** Python
+* **Data Manipulation:** pandas
+* **Data Visualization:** matplotlib
+* **Environment:** Jupyter Notebook  
+
 ## Business Task
 Lily Moreno, my manager and the director of marketing of Cyclistic, a company that employs a bike-share program, intends to desing a new marketing strategy to increase the company's subscriptions by converting casual riders into annual members. In order to convince Cyclistic's executive team to approve the recommended marketing program, it needs to be backed with compelling data insights and professional data visualizations. First and foremost, Cyclistic's marketing analytics team needs to understand how casual riders and members with annual subscription differ in their use of Cyclistic bikes. My job is to analyze data from both groups and to provide three recommendations based on the retrieved insights.
 
