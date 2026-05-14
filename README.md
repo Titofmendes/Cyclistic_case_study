@@ -11,12 +11,19 @@ The main goal of this project is to simulate a case study, in which I need to co
 
 ## Table of Contents
 [Project Structure](#project-structure)
+
 [Business Task](#business-task)
+
 [Data Sources](#data-sources)
+
 [Process](#process)
+
 [Key Insights](#key-insights)
+
 [Recommendations](#recommendations)
+
 [Conclusion](#conclusion)
+
 [Author Contact](#author-contact)
 
 ## Project structure
