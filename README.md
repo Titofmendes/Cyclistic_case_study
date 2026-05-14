@@ -9,6 +9,16 @@ Due to Privacy regulations, all data is devoid of personally identifiable inform
 
 The main goal of this project is to simulate a case study, in which I need to collect, process, analyze data in order to provide meaningful data_driven insights and recommendations.
 
+## Table of Contents
+[Project Structure](#project-structure)
+[Business Task](#business-task)
+[Data Sources](#data-sources)
+[Process](#process)
+[Key Insights](#key-insights)
+[Recommendations](#recommendations)
+[Conclusion](#conclusion)
+[Author Contact](#author-contact)
+
 ## Project structure
 ```
 Cyclistic_case_study/
